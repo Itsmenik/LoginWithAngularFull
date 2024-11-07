@@ -32,6 +32,39 @@ create the project -- new comp --> user --> Registration  (deleter the spce an c
 ng g s shared/service/auth  ( Services are usually provided at the root of the application and any component that needs to use them can simply declare them as a constructor parameter.)
 
 --------(Adding the bootstrap)
-cdn 
+__________________________________________________________________________________________________________________________________
+Now we are  doing the validation so in the validation --> we have created the  
+assiginin array in the array we put the validation -->  
+
+
+like this ==>  Password :['',Validators.required,Validators.minLength(6) ,],  
+Validators have the  multiple type of method  
+
+________________________________________________________________________________ 
+childern concept in the routing --> 
+
+export const routes: Routes = [ 
+  {path:'user',component:UserComponent ,
+    children:[
+        {path:'login',component:LogiinComponent},
+        {path:'register',component:RegistrationComponent}
+    ]
+
+  } , 
+  {path:'re',component:RegistrationComponent } 
+   
+
+];
+
+________________________________________________________________________________
+
+
+
+
+
+
+
+
+
 
  
